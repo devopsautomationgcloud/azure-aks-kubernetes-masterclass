@@ -79,10 +79,10 @@ AKS_AD_AKSADMIN_GROUP_ID=$(az ad group create --display-name aksadmins --mail-ni
 echo $AKS_AD_AKSADMIN_GROUP_ID
 
 # Create Azure AD AKS Admin User 
-# Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com
+# Replace with your AD Domain - aksadmin1@devopsautomationgcloudgmail.onmicrosoft.com
 AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Admin1" \
-  --user-principal-name aksadmin1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name aksadmin1@devopsautomationgcloudgmail.onmicrosoft.com\
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
@@ -91,7 +91,7 @@ echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 az ad group member add --group aksadmins --member-id $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 
 # Make a note of Username and Password
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@devopsautomationgcloudgmail.onmicrosoft.com
 Password: @AKSDemo123
 ```
 
@@ -118,11 +118,11 @@ echo $AKS_SSH_KEY_LOCATION
 ```
 - Reference for [Create SSH Key](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed)
 
-## Step-05: Pre-requisite-5: Create Log Analytics Workspace
+## Step-05: Pre-requisite-5: Create Log Analytics Workspace ( the workspace name has to be unique
 ```
 # Create Log Analytics Workspace
 AKS_MONITORING_LOG_ANALYTICS_WORKSPACE_ID=$(az monitor log-analytics workspace create               --resource-group ${AKS_RESOURCE_GROUP} \
-                                           --workspace-name aksprod-loganalytics-workspace1 \
+                                           --workspace-name aksprod-loganalytics-workspace4imanage \
                                            --query id \
                                            -o tsv)
 
@@ -200,7 +200,7 @@ az aks get-credentials --name ${AKS_CLUSTER}  --resource-group ${AKS_RESOURCE_GR
 kubectl get nodes
 URL: https://microsoft.com/devicelogin
 Code: HL724557M
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@devopsautomationgcloudgmail.onmicrosoft.com
 Password: @AKSDemo123
 
 # Cluster Info
