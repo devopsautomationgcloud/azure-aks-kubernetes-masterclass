@@ -118,7 +118,7 @@ echo $AKS_SSH_KEY_LOCATION
 ```
 - Reference for [Create SSH Key](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed)
 
-## Step-05: Pre-requisite-5: Create Log Analytics Workspace ( the workspace name has to be unique
+## Step-05: Pre-requisite-5: Create Log Analytics Workspace ( the workspace name has to be unique)
 ```
 # Create Log Analytics Workspace
 AKS_MONITORING_LOG_ANALYTICS_WORKSPACE_ID=$(az monitor log-analytics workspace create               --resource-group ${AKS_RESOURCE_GROUP} \
