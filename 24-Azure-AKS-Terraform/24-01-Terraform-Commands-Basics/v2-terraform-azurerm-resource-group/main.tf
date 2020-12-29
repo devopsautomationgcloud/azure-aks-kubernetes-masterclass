@@ -9,6 +9,8 @@ provider "azurerm" {
 
  
 # Create a Azure Resource Group
+#aks-rg2: is the local name which will be used inside the terraform code.
+#aks-rg2-tf: is the actual resource name which you will see in the portal
 resource "azurerm_resource_group" "aks-rg2" {
   name     = "aks-rg2-tf"
   location = "Central US"
