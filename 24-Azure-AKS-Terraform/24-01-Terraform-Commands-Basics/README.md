@@ -71,7 +71,12 @@ az account list
 
 # Set Specific Subscription (if we have multiple subscriptions)
 az account set --subscription="SUBSCRIPTION_ID"
+
+# Check which subscription is in use:
+az account show
+
 ```
+
 
 ## Step-04: Understand terrafrom init & provider azurerm
 - Understand about [Terraform Providers](https://www.terraform.io/docs/providers/index.html)
