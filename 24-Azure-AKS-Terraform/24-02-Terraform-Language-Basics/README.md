@@ -237,6 +237,9 @@ Observation: You can see that variable present in dev.auto.tfvars autoloaded now
 TF_VAR_<VARIABLE-NAME>  - case-sensitive
 # Set Environment Variable using Bash
 export TF_VAR_location="westus"
+
+#To unset any environment variable:
+unset TF_VAR_location
 ```
 
 ## Step-09: Final Look of Resource Group
