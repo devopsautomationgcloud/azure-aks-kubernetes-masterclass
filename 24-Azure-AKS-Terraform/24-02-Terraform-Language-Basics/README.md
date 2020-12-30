@@ -248,7 +248,7 @@ unset TF_VAR_location
 ```
 resource "azurerm_resource_group" "aks_rg" {
   location = var.location
-  name     = "${var.resource_group_name}-${var.environment}"
+  name     = "${var.resource_group_name}-${var.environment}" # need to use {} when combining variable names together.
 }
 ```
 
