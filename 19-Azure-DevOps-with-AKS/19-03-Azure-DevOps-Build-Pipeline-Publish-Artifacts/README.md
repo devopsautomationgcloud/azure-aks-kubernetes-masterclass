@@ -63,6 +63,7 @@ description: Create Azure Pipeline to Build and Push Docker Image to Azure Conta
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        # ArtifactName is the folder you define in the box:
         ArtifactName: 'kube-manifests'
         publishLocation: 'Container'         
 ```
